@@ -1,0 +1,12 @@
+[Unit]
+Description=Solana Node Heartbeat for Uptime Monitoring
+After=network.target
+
+[Service]
+WorkingDirectory=/root/chainflip-community-rpc-nodes
+User=root
+ExecStart=/root/chainflip-community-rpc-nodes/.venv/bin/python3 ./betterstack/solana/hearbeat.py --config ./betterstack/solana/config.json
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

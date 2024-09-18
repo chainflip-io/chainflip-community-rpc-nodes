@@ -1,0 +1,13 @@
+[Unit]
+Description=Solana Node Slot Comparison Exporter
+After=network.target
+
+[Service]
+WorkingDirectory=/root/chainflip-community-rpc-nodes
+User=root
+ExecStart=/root/chainflip-community-rpc-nodes/.venv/bin/python3 ./prometheus_exporters/solana/exporter.py --config ./prometheus_exporters/solana/config.json
+Restart=always
+Environment="PROMETHEUS_PORT=8000"
+
+[Install]
+WantedBy=multi-user.target

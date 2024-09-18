@@ -76,7 +76,7 @@ def check_node_slots(config):
 
         if node_slot is not None:
             NODE_SLOT_NUMBER.labels(host=host["host"]).set(node_slot)
-            slot_difference = reference_slot - node_slot
+            slot_difference = node_slot - reference_slot
             SLOT_DIFFERENCE.labels(host=host["host"]).set(slot_difference)
             logging.info(
                 f"Host: {host['host']}, Node Slot: {node_slot}, Slot Difference: {slot_difference}"

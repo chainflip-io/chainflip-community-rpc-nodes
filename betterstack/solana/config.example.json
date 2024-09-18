@@ -1,0 +1,9 @@
+{
+  "hosts": [
+    {
+      "host": "chainflip",
+      "rpc_url": "https://rpc.devnet.solana.chainflip.io",
+      "heartbeat_endpoint": "https://uptime.betterstack.com/api/v1/heartbeat/xxx"
+    }
+  ]
+}
